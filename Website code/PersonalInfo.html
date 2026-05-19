@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal · info</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="mainFrame.css">
+
+
+</head>
+</head>
+
+<body>
+    <div id="clock" class="clock-display w3-animate-right"
+        style="position: fixed; top: -0.3vh; right: 6vh; transition: 10s;">
+        00:00:00
+    </div>
+    <div class="bgimg-1">
+
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card">
+
+                <div class="w3-container w3-center w3-animate-left" style="animation-duration: 1s;">
+                    <a class="w3-bar-item w3-button floatt" href="Index.html">
+                        <b>Home</b>
+                    </a>
+
+                    <a class="w3-bar-item w3-button floatt" href="Personalinfo.html">
+                        <b>More About Me</b>
+                    </a>
+
+                    <a class="w3-bar-item w3-button floatt" href="Tools.html">
+                        <b>Provided Tools</b>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <section class="hero w3-animate-bottom">
+
+            <div class="hero-card container-fluid">
+
+                <div class="row align-items-center">
+
+                    <!-- LEFT -->
+                    <div class=" hero-left">
+
+                        <h1 class="hero-title" style="color: darkkhaki;">
+                            About Me
+                        </h1>
+
+                        <div class="jumbotron" style="background-color: transparent; color: darkkhaki;">
+
+                            <button id="aboutBtn" class="w3-round-xxlarge w3-button w3-light-grey" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#aboutMe">
+
+                                Click Me!
+                            </button>
+                            <div class="collapse mt-3" id="aboutMe">
+                                <div class="w3-round-xxlarge w3-black" id="listbtn" data-="#list">
+                                    <button class="w3-round-xxlarge w3-button"
+                                        onclick="Option('General')">General</button>
+                                    <button class="w3-round-xxlarge w3-button" onclick="Option('Personal')">More About
+                                        Me</button>
+                                    <button class="w3-round-xxlarge w3-button" onclick="Option('Tokyo')">Bucket
+                                        List</button>
+                                </div>
+
+                                <div class="card card-body" style="margin: 50px; color: black;">
+
+                                    <div id="General" class="w3-container clickMe" style="margin-left: 10px; margin-right: 100px; margin-bottom: 100px; margin-top: 30px;
+                                        font-family: -apple-system;">
+                                        <h2 style="margin-bottom: 30px; font-size: 40px; padding-left: 10%;">General
+                                            Information</h2>
+                                        <div style="font-size: 20px; line-height: 20px;">
+                                            <p>My name is Danial Asyraf,
+                                                I'm studying at <a href="https://www.utm.my/" target="_blank"
+                                                    style="text-decoration: none;">
+                                                    Universiti Teknologi Malaysia (UTM)</a> .
+                                            </p>
+
+                                            <p>I am currently pursuing a diploma in Computer Science.</p>
+
+                                            <p>Currently, I am in my 1st year, 3rd semester.</p>
+
+                                            <p>
+                                                I'm particularly interested in software development,
+                                                especially web development and mobile app development.
+                                            </p>
+
+                                            <p>
+                                                In my free time, I enjoy learning new programming
+                                                languages and exploring different technologies.
+                                            </p>
+                                        </div>
+                                        <div class="w3-container w3-center w3-animate-zoom"
+                                            style="position: absolute;right: 10%; top: 18%; transform: translateY(-20%); width: 300px;">
+
+                                            <img src="image1/utm.png" alt="university logo" width="350px"
+                                                height="150px">
+                                        </div>
+                                    </div>
+
+                                    <div id="Personal" class="w3-container clickMe" style="display:none;">
+                                        <p style="font-family: -apple-system;">
+                                            Full Name: Danial Asyraf Bin Zulkifli <br>
+                                            Date of Birth: 10th May 2007 <br>
+                                            Matric: A25DW0472 <br>
+                                            (PHOTO) <br>
+
+                                        </p>
+
+                                    </div>
+
+                                    <div id="Tokyo" class="w3-container clickMe" style="display:none">
+
+                                        <h2 style="margin-bottom: 3vh;">Countries to visit: </h2>
+
+                                        <ul>
+                                            <li>JAPAN</li>
+                                            <li>GERMANY</li>
+                                            <li>CANADA</li>
+                                            <li>AUSTRALIA</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <p class="hero-text floatt2" style="margin-top: -20px; margin-bottom: -40px;">
+                                    Click the card below to know more
+                                </p>
+
+                                <!-- QUICK INFO SECTION -->
+                                <div class="feature-boxes" style="max-width: 17000px;">
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#hobby"
+                                        style="text-align: left;">
+
+                                        <div class="feature-card ">
+                                            <i class="bi bi-person-circle"></i>
+                                            <h4>My Hobbies</h4>
+
+                                            <ul>
+                                                <li>Play Games</li>
+                                                <li>Watch Animes</li>
+                                                <li>Listen To Music</li>
+                                            </ul>
+
+                                        </div>
+                                    </button>
+
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#music"
+                                        style="text-align: left;">
+                                        <div class="feature-card">
+                                            <i class="bi bi-code-slash"></i>
+                                            <h5>Music Genre</h5>
+
+                                            <ul>
+                                                <li>J-Pop</li>
+                                                <li>J-Rock</li>
+                                                <li>Anime</li>
+                                            </ul>
+
+                                        </div>
+                                    </button>
+
+
+                                    <div class="feature-card">
+                                        <i class="bi bi-music-note-beamed"></i>
+                                        <h5>Favourite Group / Singer</h5>
+                                        <ul>
+                                            <li class="bi bi-music-note-list"> <a
+                                                    href="https://projectsekai.fandom.com/wiki/25-ji,_Nightcord_de."
+                                                    target="_blank" style="text-decoration: none;">
+                                                    Nightcord at 25:00</a></li>
+                                            <li class="bi bi-music-note-list"> <a
+                                                    href="https://projectsekai.fandom.com/wiki/Vivid_BAD_SQUAD"
+                                                    target="_blank" style="text-decoration: none;">
+                                                    Vivid BAD SQUAD</a></li>
+                                            <li class="bi bi-person"> <a href="https://www.youtube.com/@Ado1024"
+                                                    target="_blank" style="text-decoration: none;">
+                                                    ADO</a></li>
+                                            <li class="bi bi-music-note-list"> <a
+                                                    href="https://projectsekai.fandom.com/wiki/Leo/need" target="_blank"
+                                                    style="text-decoration: none;">
+                                                    Leo/need</a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <a href="CV.html">
+                                    <input type="button" value="Click for my cv" class="w3-primary-bar">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal Hobby -->
+    <div class="modal fade" id="hobby" tabindex="-1" aria-labelledby="hobbyLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h1 class="modal-title fs-5" id="hobbyLabel">HOBBIES</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Games
+                    <ul>
+                        <li>TRAILMAKERS<br><iframe src="https://steampowered.com/widget/585420/" frameborder="0"
+                                width="646" height="190"></iframe></li>
+                        <li>Arknights: Endfield<br><iframe src="https://endfield.gryphline.com/en-us#home"
+                                frameborder="0" width="700" height="250"></iframe></li>
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#animes"
+                        data-bs-toggle="modal">next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="animes" aria-hidden="true" aria-labelledby="animesModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Animes</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="image1/cinderella-gray.jpg" alt="ogurin">
+                    <img src="image1/arifureta.jpg" alt="hajime">
+                    <img src="image1/alya-hides-feelings-in-russian.webp" alt="alya" width="200px"
+                        height="265px"><br><br>
+
+                    <img src="image1/miku_no_sing.jpg" alt="movie_miku">
+                    <img src="image1/COTE.jpg" alt="ayanokoji">
+                    <img src="image1/shangri-la_frontier.jpg" alt="birdman" width="200px">
+                    <img src="image1/tonikaku kawaii.jpg" alt="tsukasa">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#music" data-bs-toggle="modal">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Music -->
+    <div class="modal fade" id="music" tabindex="-1" aria-labelledby="musicLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h1 class="modal-title fs-5" id="musicLabel">MUSIC</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table style="position: margin-left 50%;">
+                        <tr>
+                            <th>J-Pop</th>
+                            <td><iframe data-testid="embed-iframe" style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/track/6Ho58lFgmMy2Frbwj5zfzY?utm_source=generator"
+                                    width="100%" height="152" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe></td>
+
+                            <td><iframe data-testid="embed-iframe" style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/track/02k0bPPQ7oE5laHo5KEXP9?utm_source=generator"
+                                    width="100%" height="152" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay 'none'; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe></td>
+
+
+                        </tr>
+                        <tr>
+                            <th>J-Rock</th>
+                            <td><iframe data-testid="embed-iframe" style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/track/1KqITEnkHQw9MsQ0ObRESq?utm_source=generator"
+                                    width="100%" height="152" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe></td>
+
+                            <td><iframe data-testid="embed-iframe" style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/track/4yYHiKjLwZBR3kr3bHUtVW?utm_source=generator"
+                                    width="100%" height="152" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe></td>
+
+                        </tr>
+                        <tr>
+
+                            <th>Anime</th>
+                            <td><iframe data-testid="embed-iframe" style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/track/0zq7acf2GXWnpEkRenmY3D?utm_source=generator"
+                                    width="100%" height="152" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe></td>
+
+                            <td><iframe data-testid="embed-iframe" style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/track/0kdqcbwei4MDWFEX5f33yG?utm_source=generator"
+                                    width="100%" height="152" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe></td>
+                        </tr>
+                    </table>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        // Get the current page URL
+        const currentPage = window.location.pathname.split("/").pop();
+        // Get all the links in the navigation bar
+        const navLinks = document.querySelectorAll('.w3-bar-item');
+
+        navLinks.forEach(link => {
+            if (link.href === currentPage) {
+                link.classList.add('w3-light-grey'); // Add a class to highlight the active link
+            }
+        });
+
+        function Option(Item) {
+            let x = document.getElementsByClassName("clickMe");
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(Item).style.display = "block";
+        }
+
+    </script>
+    <script>
+        // auto scroll wooooo
+        const aboutBtn = document.getElementById("aboutBtn");
+        const aboutSection = document.getElementById("aboutMe");
+
+        aboutBtn.addEventListener("click", function () {
+
+            // Wait for collapse animation
+            setTimeout(() => {
+
+                aboutSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }, 200);
+
+        });
+
+        const modals = ['hobby', 'animes', 'music'];
+        modals.forEach(id => {
+            const modal = document.getElementById(id);
+
+            if (modal) {
+                modal.addEventListener('shown.bs.modal', () => {
+                    console.log(id + " modal opened");
+                });
+            }
+        });
+    </script>
+    <script>//clock
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            // Add leading zeros to numbers less than 10
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            const timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Call the function every second
+        setInterval(updateClock, 1000);
+
+        // Initialize immediately so there is no 1-second delay
+        updateClock();
+    </script>
+</body>
+
+</html>

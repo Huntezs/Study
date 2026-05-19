@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="mainFrame.css">
+    <link rel="clock" href="clock.js">
+</head>
+</head>
+
+<body>
+    <div id="clock" class="clock-display w3-animate-right"
+        style="position: fixed; top: -0.3vh; right: 6vh; transition: 10s;">
+        00:00:00
+    </div>
+    <div class="bgimg-1" w3-display-container w3-opacity-min></div>
+
+
+    <!-- NAVIGATION -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card">
+
+            <div class="w3-container w3-center w3-animate-left" style="animation-duration: 1s;">
+
+                <a class="w3-bar-item w3-button floatt" href="Index.html">
+                    <b>Home</b>
+                </a>
+
+                <a class="w3-bar-item w3-button floatt" href="Personalinfo.html">
+                    <b>More About Me</b>
+                </a>
+
+                <a class="w3-bar-item w3-button floatt" href="Tools.html">
+                    <b>Provided Tools</b>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the current page URL
+        const currentPage = window.location.href;
+        // Get all the links in the navigation bar
+        const navLinks = document.querySelectorAll('.w3-bar-item');
+
+        navLinks.forEach(link => {
+            if (link.href === PersonalInfo.html) {
+                link.classList.add('w3-light-grey'); // Add a class to highlight the active link
+            }
+        });
+    </script>
+
+    <script>//clock
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            // Add leading zeros to numbers less than 10
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            const timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Call the function every second
+        setInterval(updateClock, 1000);
+
+        // Initialize immediately so there is no 1-second delay
+        updateClock();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

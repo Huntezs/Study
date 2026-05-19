@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="mainFrame.css">
+
+</head>
+
+<body>
+    <div id="clock" class="clock-display w3-animate-right"
+        style="position: fixed; top: -0.3vh; right: 6vh; transition: 10s;">
+        00:00:00
+    </div>
+    <!-- NAVIGATION -->
+    <div class="w3-top" style="letter-spacing: 2px;">
+        <div class="w3-bar w3-card">
+
+            <div class="w3-container w3-center w3-animate-left">
+
+                <a class="w3-bar-item w3-button floatt" href="Index.html">
+                    <b>Home</b>
+                </a>
+
+                <a class="w3-bar-item w3-button floatt" href="PersonalInfo.html">
+                    <b>More About Me</b>
+                </a>
+
+                <a class="w3-bar-item w3-button floatt" href="Tools.html">
+                    <b>Provided Tools</b>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- HERO SECTION -->
+    <div class="bgimg-1">
+        <section class="hero">
+
+            <div class="hero-card container-fluid w3-animate-zoom">
+
+                <div class="row align-items-center">
+
+                    <!-- LEFT -->
+                    <div class="col-lg-7 hero-left" style="letter-spacing: 2px;">
+
+                        <h1 class="hero-title2" style="color: antiquewhite;">
+                            Welcome to my Website
+                        </h1>
+
+
+                        <p class="hero-text floatt2" style="letter-spacing: 2px; color: aliceblue; margin-left: 20px;">
+                            This is a modern personal website showcasing tools, personal information,
+                            projects with interactive features that has a clean design.
+                        </p>
+
+                        <div class="hero-buttons" style="letter-spacing: 2px;;">
+
+                            <a href="Tools.html" class="btn btn-outline-light custom-btn" style="font-size: 20px; margin-left: 10% ;">
+                                Explore Tools
+                            </a>
+
+                            <a href="PersonalInfo.html" class="btn btn-outline-light custom-btn"
+                                style="font-size: 20px">
+                                About Me
+                            </a>
+
+                        </div>
+
+                        <!-- QUICK INFO SECTION -->
+                        <div class="feature-boxes" style="letter-spacing: 2px; gap: 60px; font-size: 18px;">
+
+                            <div class="feature-card" style="color:azure; height: 300px; width: 300px;">
+                                <i class="bi bi-person-circle"></i>
+                                <h5>About Me</h5>
+                                <p style="margin-top: 20px;">Learn more about my background and interests.</p>
+                            </div>
+
+                            <div class="feature-card" style="color:azure; height: 300px; width: 300px;">
+                                <i class="bi bi-code-slash"></i>
+                                <h5>Projects</h5>
+                                <p>
+                                <ul>
+                                    <li>PF Semester 1</li>
+                                    <li>DL Semester 1</li>
+                                    <li>C++ Semester 2</li>
+                                    <li>COA Semester 2</li>
+                                </ul>
+                                </p>
+                            </div>
+
+                            <div class="feature-card" style="color:azure;  height: 300px; width: 300px;">
+                                <i class="bi bi-stars"></i>
+                                <h5>Experience</h5>
+                                <p>
+                                <ul>
+                                    <li>Joined ELS Language Essay Competition 2022 & 2023</li>
+                                    <li>English Debate</li>
+                                </ul>
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT -->
+                    <div class="col-lg-5 hero-right">
+
+                        <img src="image1/Clifford.png" alt="Clifford Logo">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+    </div>
+
+
+    <script>
+
+        // ACTIVE NAVIGATION
+        const currentPage = window.location.href;
+        const navLinks = document.querySelectorAll('.w3-bar-item');
+
+        navLinks.forEach(link => {
+            if (link.href === currentPage) {
+                link.classList.add('w3-light-grey');
+            }
+        });
+
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            // Add leading zeros to numbers less than 10
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            const timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Call the function every second
+        setInterval(updateClock, 1000);
+
+        // Initialize immediately so there is no 1-second delay
+        updateClock();
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
